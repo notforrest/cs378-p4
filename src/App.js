@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState, useEffect, Fragment } from "react";
 
@@ -13,6 +12,8 @@ function App() {
     async function fetchActivityList(type) {
         try {
             let activities = [];
+
+            // Fetch 10 activities from the Bored API
             while (activities.length < 10) {
                 const response = await fetch(
                     `https://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=${maxAccessLevel}${
@@ -26,16 +27,15 @@ function App() {
                     activities.push([data.activity, data.accessibility]);
                 }
             }
-            console.log(activities);
 
             // Set the state variables to the data from the API
             setActivityList(activities);
-            console.log(activityList);
         } catch (error) {
             console.log(error);
         }
     }
 
+    // Fetch the activity list when the page loads
     useEffect(() => {
         fetchActivityList();
     }, []);
