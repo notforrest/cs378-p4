@@ -11,7 +11,7 @@
 }
 
 .Page {
-    margin: 0 1em;
+    width: 80vw;
 }
 
 .App-logo {
@@ -46,7 +46,7 @@ button {
     color: white;
     font-size: 1em;
     margin: 8px 0;
-    padding: 14px 20px;
+    padding: 0.5em 1em;
 }
 
 button.socialBtn {
@@ -57,6 +57,12 @@ button.socialBtn {
 button.relaxBtn {
     background-color: blanchedalmond;
     color: black;
+}
+
+button.pplBtn {
+    background-color: white;
+    color: black;
+    font-size: 0.6em;
 }
 
 hr {
@@ -73,4 +79,10 @@ b {
 ol {
     text-align: left;
     font-size: medium;
+}
+
+input {
+    font-size: large;
+    text-align: center;
+    width: 25%;
 }
